@@ -10,8 +10,8 @@ curl_setopt($ch, CURLOPT_POSTFIELDS, "LanguageChoiceWrapper=$lang&Program=".urle
 return json_decode(curl_exec($ch),true);
 curl_close($ch);
 }
-$type = @$_GET['type'];
-$code = @$_GET['code'];
+$type = @$_REQUEST['type'];
+$code = @$_REQUEST['code'];
 $langs = ['php'=>8,'asm'=>15,'bash'=>38,'csharp'=>1,'cppgcc'=>7,'cgcc'=>6,'cclang'=>26,'clojure'=>47,'commonlisp'=>18,'d'=>30,'erlang'=>40,'fsharp'=>3,'go'=>20,'python'=>5,'perl'=>13,'javascript'=>23,'python3'=>24,'oracle'=>35,'mysql'=>33,'lua'=>14,'kotlin'=>43];
 $langsss = [];
 foreach($langs as $key => $value){
