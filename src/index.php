@@ -47,6 +47,7 @@ if (isset($code) && !empty($code)){
         echo json_encode([
             'result'=>$run['Result'],
             'errors'=>$run['Errors'],
-            'status'=>$run['Stats'],'langs'=>$langsss],448);
+            'status'=>$run['Stats'],
+            'langs'=>$langsss],448);
     }
 }
