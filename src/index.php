@@ -37,7 +37,7 @@ $langs = [
 ];
 $langsss = [];
 foreach($langs as $key => $value){
-    $langsss[$key] = $key;
+$langsss[$key] = $key;
 }
 if (isset($code) && !empty($code)){
 if (isset($type) && !empty($type)){
