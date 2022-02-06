@@ -2,13 +2,13 @@
 error_reporting(0);
 header( 'Content-Type: application/json' );
 function run ( $lang , $code ){
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, 'https://rextester.com/rundotnet/Run' );
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, "LanguageChoiceWrapper={$lang}&Program=" . urlencode ( $code ) );
-    return json_decode(curl_exec($ch),true);
-    curl_close($ch);
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, 'https://rextester.com/rundotnet/Run' );
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, "LanguageChoiceWrapper={$lang}&Program=" . urlencode ( $code ) );
+return json_decode(curl_exec($ch),true);
+curl_close($ch);
 }
 $type = @$_REQUEST[ 'type' ];
 $code = @$_REQUEST[ 'code' ];
