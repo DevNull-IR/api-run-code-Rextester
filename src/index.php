@@ -44,6 +44,8 @@ if (isset($code) && !empty($code)){
             if ($type == "php")
             $code = "<?php $code";
         $run = run($langs[$type],$code);
-        echo json_encode(['result'=>$run['Result'],'errors'=>$run['Errors'],'status'=>$run['Stats'],'langs'=>$langsss],448);
+        echo json_encode([
+            'result'=>$run['Result'],
+            'errors'=>$run['Errors'],'status'=>$run['Stats'],'langs'=>$langsss],448);
     }
 }
