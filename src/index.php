@@ -40,10 +40,10 @@ foreach($langs as $key => $value){
     $langsss[$key] = $key;
 }
 if (isset($code) && !empty($code)){
-    if (isset($type) && !empty($type)){
-    if ($type == "php")
-    $code = "<?php $code";
-    $run = run($langs[$type],$code);
-    echo json_encode(['result'=>$run['Result'],'errors'=>$run['Errors'],'status'=>$run['Stats'],'langs'=>$langsss],448);
+        if (isset($type) && !empty($type)){
+            if ($type == "php")
+            $code = "<?php $code";
+        $run = run($langs[$type],$code);
+        echo json_encode(['result'=>$run['Result'],'errors'=>$run['Errors'],'status'=>$run['Stats'],'langs'=>$langsss],448);
     }
 }
